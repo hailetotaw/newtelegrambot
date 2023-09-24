@@ -8,7 +8,7 @@ import {
 import { mainServices } from "./constants/mainServices";
 import express from "express";
 
-// Create an instance of the `Bot` class and pass your bot token to it.
+// Create an instance of the `Bot` class and pass your bot token to it. test
 const bot = new Bot<Context>("6441810177:AAH4T7fWg9EK1OR5mqTGKtgYHRY6d7hLnF8"); // <-- put your bot token between the ""
 
 const startHandler: Middleware<Context> = async (ctx, next) => {
