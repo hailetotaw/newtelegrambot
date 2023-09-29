@@ -5,11 +5,14 @@ import {
   Middleware,
   webhookCallback,
 } from "grammy";
-import { mainServices } from "./constants/mainServices";
+import { mainServices } from "../constants/mainServices";
 import express from "express";
 
+const token = "6441810177:AAH4T7fWg9EK1OR5mqTGKtgYHRY6d7hLnF8"; //process.env.BOT_TOKEN;
+if (!token) throw new Error("BOT_TOKEN is unset");
+
 // Create an instance of the `Bot` class and pass your bot token to it. test
-const bot = new Bot<Context>("6441810177:AAH4T7fWg9EK1OR5mqTGKtgYHRY6d7hLnF8"); // <-- put your bot token between the ""
+const bot = new Bot<Context>(token); // <-- put your bot token between the ""
 
 const startHandler: Middleware<Context> = async (ctx, next) => {
   var parentServices = mainServices.filter(
@@ -89,3 +92,5 @@ if (process.env.NODE_ENV === "production") {
   // Use Long Polling for development
   bot.start();
 }
+
+export default webhookCallback(bot, "http");
