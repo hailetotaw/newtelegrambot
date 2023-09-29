@@ -41,14 +41,14 @@ export const mainServices: Service[] = [
     label: "Pharmacy",
     parentCode: "1",
     description: "Pharmacy",
-    imageUrl: "",
+    imageUrl: "https://picsum.photos/200/300",
   },
   {
     code: "7",
     label: "Doctors",
     parentCode: "1",
     description: "Doctors",
-    imageUrl: "",
+    imageUrl: "https://picsum.photos/200/300",
   },
 
   {
@@ -63,13 +63,13 @@ export const mainServices: Service[] = [
     label: "Pharmacy",
     parentCode: "1",
     description: "Pharmacy",
-    imageUrl: "",
+    imageUrl: "https://picsum.photos/200/300",
   },
   {
     code: "10",
     label: "Doctors",
     parentCode: "1",
     description: "Doctors",
-    imageUrl: "",
+    imageUrl: "https://picsum.photos/200/300",
   },
 ];
